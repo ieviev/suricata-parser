@@ -50,7 +50,8 @@ let run (ps: string, args: string) =
 printfn "parsing rules to suricata.json.."
 
 let parseRulesToJson () =
-    run("virtualenv", "-q env").WaitForExit()
+    let venv = run("virtualenv", "-q env")
+    venv.WaitForExit()
     run("env/bin/python3", $"dump-rules.py \"{rulesPath}\"").WaitForExit()
 
 parseRulesToJson ()
