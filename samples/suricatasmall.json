@@ -1,0 +1,110 @@
+[
+    {
+        "enabled": false,
+        "_action": "alert",
+        "_header": "udp $HOME_NET any -> $EXTERNAL_NET 69",
+        "_options": [
+            {
+                "name": "msg",
+                "value": "\"ET ATTACK_RESPONSE Cisco TclShell TFTP Read Request\""
+            },
+            {
+                "name": "content",
+                "value": "\"|00 01 74 63 6C 73 68 2E 74 63 6C|\""
+            },
+            {
+                "name": "reference",
+                "value": "url,wwww.irmplc.com/downloads/whitepapers/Creating_Backdoors_in_Cisco_IOS_using_Tcl.pdf"
+            },
+            {
+                "name": "reference",
+                "value": "url,doc.emergingthreats.net/2009244"
+            },
+            {
+                "name": "classtype",
+                "value": "bad-unknown"
+            },
+            {
+                "name": "sid",
+                "value": "2009244"
+            },
+            {
+                "name": "rev",
+                "value": "2"
+            },
+            {
+                "name": "metadata",
+                "value": {
+                    "data": [
+                        "created_at 2010_07_30",
+                        "updated_at 2010_07_30"
+                    ]
+                }
+            }
+        ],
+        "_sid": 2009244,
+        "_gid": null,
+        "_msg": "ET ATTACK_RESPONSE Cisco TclShell TFTP Read Request",
+        "_rev": 2,
+        "_classtype": "bad-unknown",
+        "_metadata": [
+            "created_at 2010_07_30",
+            "updated_at 2010_07_30"
+        ],
+        "_raw": "alert udp $HOME_NET any -> $EXTERNAL_NET 69 (msg:\"ET ATTACK_RESPONSE Cisco TclShell TFTP Read Request\"; content:\"|00 01 74 63 6C 73 68 2E 74 63 6C|\"; reference:url,wwww.irmplc.com/downloads/whitepapers/Creating_Backdoors_in_Cisco_IOS_using_Tcl.pdf; reference:url,doc.emergingthreats.net/2009244; classtype:bad-unknown; sid:2009244; rev:2; metadata:created_at 2010_07_30, updated_at 2010_07_30;)"
+    },
+    {
+        "enabled": true,
+        "_action": "alert",
+        "_header": "udp $EXTERNAL_NET 69 -> $HOME_NET any",
+        "_options": [
+            {
+                "name": "msg",
+                "value": "\"ET ATTACK_RESPONSE Cisco TclShell TFTP Download\""
+            },
+            {
+                "name": "content",
+                "value": "\"|54 63 6C 53 68 65 6C 6C|\""
+            },
+            {
+                "name": "reference",
+                "value": "url,wwww.irmplc.com/downloads/whitepapers/Creating_Backdoors_in_Cisco_IOS_using_Tcl.pdf"
+            },
+            {
+                "name": "reference",
+                "value": "url,doc.emergingthreats.net/2009245"
+            },
+            {
+                "name": "classtype",
+                "value": "bad-unknown"
+            },
+            {
+                "name": "sid",
+                "value": "2009245"
+            },
+            {
+                "name": "rev",
+                "value": "2"
+            },
+            {
+                "name": "metadata",
+                "value": {
+                    "data": [
+                        "created_at 2010_07_30",
+                        "updated_at 2010_07_30"
+                    ]
+                }
+            }
+        ],
+        "_sid": 2009245,
+        "_gid": null,
+        "_msg": "ET ATTACK_RESPONSE Cisco TclShell TFTP Download",
+        "_rev": 2,
+        "_classtype": "bad-unknown",
+        "_metadata": [
+            "created_at 2010_07_30",
+            "updated_at 2010_07_30"
+        ],
+        "_raw": "alert udp $EXTERNAL_NET 69 -> $HOME_NET any (msg:\"ET ATTACK_RESPONSE Cisco TclShell TFTP Download\"; content:\"|54 63 6C 53 68 65 6C 6C|\"; reference:url,wwww.irmplc.com/downloads/whitepapers/Creating_Backdoors_in_Cisco_IOS_using_Tcl.pdf; reference:url,doc.emergingthreats.net/2009245; classtype:bad-unknown; sid:2009245; rev:2; metadata:created_at 2010_07_30, updated_at 2010_07_30;)"
+    }
+]
