@@ -50,7 +50,7 @@ let run (ps: string, args: string) =
 printfn "parsing rules to suricata.json.."
 
 let parseRulesToJson () =
-    let p = run("python3", $"dump-rules.py \"{rulesPath}\"")
+    let p = run("python", $"dump-rules.py \"{rulesPath}\"")
     p.WaitForExit()
     if p.ExitCode <> 0  then failwith "python module failed, run \"pip install -r ./requirements.txt\""
 
