@@ -8,6 +8,7 @@
 ## Usage
 
 ```
+pip install -r ./requirements.txt
 dotnet fsi ./main.fsx
 ```
 
